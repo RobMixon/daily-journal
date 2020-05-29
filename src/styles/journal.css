@@ -1,7 +1,5 @@
-form {
-    display: flex;
-    flex-direction: column;
-}
+
+
 fieldset {
     flex: inherit;
     display: flex;
