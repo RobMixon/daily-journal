@@ -1,0 +1,4 @@
+.journal__entry {
+    display: flex;
+    flex-direction: row;
+}
