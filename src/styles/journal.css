@@ -1,4 +1,9 @@
-.journal__entry {
+form {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+}
+fieldset {
+    flex: inherit;
+    display: flex;
+    flex-direction: column;
 }
