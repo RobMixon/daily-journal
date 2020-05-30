@@ -6,6 +6,11 @@ Daily journal is a webpage created to input daily journal entries while I attend
 
 The daily journal is still under development and will be completed sometime around christmas 2020. 
 
+## Installing
+
+clone/fork this repository to your local hard drive
+serve utilizing the terminal
+
 ## Usage
 
 This could be used by anyone looking to save a daily journal while they learn new concepts and track their mood while doing so. 
