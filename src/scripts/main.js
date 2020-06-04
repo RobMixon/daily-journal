@@ -1,1 +1,6 @@
-renderJournalEntries(journalEntries)
+
+getJournalData().then(
+    () => {
+        renderJournalEntries(journalEntries)
+    }
+)

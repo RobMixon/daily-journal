@@ -26,3 +26,18 @@ const getJournalData = () => {
     entryArray.push(journalEntry)
 }
 */
+
+let journalEntries = []
+
+const getJournalData = () => {
+    return fetch("http://localhost:8088/journalEntries").then(
+        (response) => {
+            return response.json()
+        }
+    )
+    .then(
+        (arrayOfJournal) => {
+            journalEntries = arrayOfJournal
+        }
+    )
+}
