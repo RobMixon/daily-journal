@@ -1,1 +1,1 @@
-journalList(journalEntries)
+renderJournalEntries(journalEntries)

@@ -1,8 +1,8 @@
-const journalList = (journalEntries) => {
+const renderJournalEntries = (journalEntries) => {
 
     for (const currentJournalObject of journalEntries) {
         const journalHTML = journalConverter(currentJournalObject)
-        const journalArticleElement = document.querySelector(".old__entries")
+        const journalArticleElement = document.querySelector(".entryLog")
         journalArticleElement.innerHTML += journalHTML
     }
 }
