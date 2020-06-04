@@ -1,4 +1,5 @@
 //array that is getting the entry pushed to it
+/*
 let journalEntries =[
     {
     date: "05/29/2020",
@@ -19,6 +20,7 @@ let journalEntries =[
     mood: "happy",
 }
 ]
+*/
 /*
 const getJournalData = () => {
     entryArray.push(journalEntry)
