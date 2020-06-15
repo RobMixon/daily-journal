@@ -1,3 +1,6 @@
+
+//converts the data into HTML
+
 const journalConverter = (entries) => {
 
     const journalHTMLRepresentation = `
@@ -10,3 +13,5 @@ const journalConverter = (entries) => {
     `              
     return journalHTMLRepresentation   
 }
+
+export default journalConverter;

@@ -1,6 +1,0 @@
-
-getJournalData().then(
-    () => {
-        renderJournalEntries(journalEntries)
-    }
-)

@@ -1,3 +1,9 @@
+
+
+
+//renders the data for use
+import journalConverter from "./entriesDOM.js"
+
 const renderJournalEntries = (journalEntries) => {
 
     for (const currentJournalObject of journalEntries) {
@@ -6,3 +12,5 @@ const renderJournalEntries = (journalEntries) => {
         journalArticleElement.innerHTML += journalHTML
     }
 }
+
+export default renderJournalEntries;
