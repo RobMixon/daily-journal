@@ -2,6 +2,10 @@
 
 
 //renders the data for use
+
+const saveButton = document.querySelector(".saveButton")
+
+
 import journalConverter from "./entriesDOM.js"
 
 const renderJournalEntries = (journalEntries) => {
