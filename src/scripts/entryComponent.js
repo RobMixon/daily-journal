@@ -3,11 +3,10 @@
 
 //renders the data for use
 
-const saveButton = document.querySelector(".saveButton")
 
 
 import journalConverter from "./entriesDOM.js"
-
+// renders data and uses convert to put inner HTML
 const renderJournalEntries = (journalEntries) => {
 
     for (const currentJournalObject of journalEntries) {

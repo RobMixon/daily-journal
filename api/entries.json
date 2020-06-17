@@ -27,6 +27,13 @@
       "entry": "learned JSON",
       "mood": "mad",
       "id": 3
+    },
+    {
+      "date": "2020-06-17",
+      "concept": "factory functions",
+      "entry": "cool stuff!",
+      "mood": "happy",
+      "id": 4
     }
   ]
 }
