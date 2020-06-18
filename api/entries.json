@@ -13,27 +13,6 @@
       "concept": "html",
       "entry": "learned html",
       "mood": "happy"
-    },
-    {
-      "id": 2,
-      "date": "05/31/2020",
-      "concept": "Javascript",
-      "entry": "learned javascript",
-      "mood": "happy"
-    },
-    {
-      "date": "06/01/2020",
-      "concept": "JSON",
-      "entry": "learned JSON",
-      "mood": "mad",
-      "id": 3
-    },
-    {
-      "date": "2020-06-17",
-      "concept": "factory functions",
-      "entry": "cool stuff!",
-      "mood": "happy",
-      "id": 4
     }
   ]
 }

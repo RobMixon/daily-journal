@@ -10,21 +10,16 @@
 
 import API from "./data.js"
 import renderJournalEntries from "./entryComponent.js"
+import saveButton from "./createEntry.js"
 
 //fetch call to get data then renders taht data
-API.getJournalEntries().then(renderJournalEntries)
-//save button event listener and obj creation to API
-const saveButton = document.querySelector(".saveButton")
-saveButton.addEventListener("click", event => {  
+const getData = () => {
+API.getJournalEntries()
+.then(renderJournalEntries)}
 
-    let journalEntryObj = {};
+getData()
+saveButton()
 
-    journalEntryObj.date = document.getElementById("journalDate").value 
-    journalEntryObj.concept = document.getElementById("concept").value
-    journalEntryObj.entry = document.getElementById("entry").value
-    journalEntryObj.mood = document.getElementById("mood").value
 
-    console.log(journalEntryObj)
-    
-    API.saveEntry(journalEntryObj)
-})
+
+export default getData;
