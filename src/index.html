@@ -7,56 +7,58 @@
     <link rel="stylesheet" href="styles/journal.css">
 </head>
 <body class="background">
-    <div>
+    <h1>Daily Journal</h1>
+    <div class="formContainer">
     <!-- Journal forms -->
-        <h1>Daily Journal</h1>
-                    <!-- date entry -->
-            <form action="">
-                <fieldset>
-                    <label for="journalDate">Date of entry</label>
-                    <input type="date" name="journalDate" id="journalDate">
-                </fieldset>
-            </form>
-                    <!-- concepts entry -->
-            <form action="">
-                <fieldset>     
-                    <label for="conceptsCovered">Concepts Covered</label>
-                    <input type="text" name="concepts" id="concepts">
-                </fieldset>
-            </form>
-                    <!-- Journal entry -->
-            <form action="">
-                <fieldset>        
-                    <label for="journalEntry">Journal Entry</label>
-                    <textarea name="journalEntry" id="journalEntry" rows="10" cols="50" required> Thoughts?</textarea><br>
-                </fieldset>
-            </form>
-                    <!-- mood entry -->
-            <form action="">
-                <fieldset>        
-                    <label for="mood">How ya feeling?</label>
-                    <select name="mood" id="mood" required>
-                        <option value="">How ya feelin?</option>
-                        <option value="happy"> happy</option>
-                        <option value="sad"> sad</option>
-                        <option value="neutral"> blah</option>
-                        <option value="angry"> angry</option>
-                        <option value="stressed / confused"> lost</option>
-                        <option value="cool"> did something cool</option>
-                        <option value="defeated"> defeated</option>
-                        <option value="mind blown"> mind blown</option>
-                        <option value="successful"> completed</option>
-                        <option value="sick of it"> sick of coding</option>
-                    </select>
-                </fieldset>
-            </form>
-                <!-- submittion button  -->
-                <button form="journal" type="submit">Record Journal Entry</button>
-    <!-- Journal forms end -->
-    </div>
-    <article class="entryLog">
-        
-    </article>
+                        <!-- date entry -->
+            <div class="entryFormContainer">
+                <form class="form">
+                    <fieldset>
+                        <label for="journalDate">Date of entry</label>
+                        <input type="date" name="journalDate" id="journalDate">
+                    </fieldset>
+                </form>
+                        <!-- concepts entry -->
+                <form class="form">
+                    <fieldset>     
+                        <label for="concept">Concepts Covered</label>
+                        <input type="text" name="concept" id="concept">
+                    </fieldset>
+                </form>
+                        <!-- Journal entry -->
+                <form class="form">
+                    <fieldset>        
+                        <label for="entry">Journal Entry</label>
+                        <input type="text" name="entry" id="entry">
+                    </fieldset>
+                </form>
+                        <!-- mood entry -->
+                <form class="form">
+                    <fieldset>        
+                        <label for="mood">How ya feeling?</label>
+                        <select name="mood" id="mood" required>
+                            <option value="">How ya feelin?</option>
+                            <option value="happy"> happy</option>
+                            <option value="sad"> sad</option>
+                            <option value="neutral"> blah</option>
+                            <option value="angry"> angry</option>
+                            <option value="stressed / confused"> lost</option>
+                            <option value="cool"> did something cool</option>
+                            <option value="defeated"> defeated</option>
+                            <option value="mind blown"> mind blown</option>
+                            <option value="successful"> completed</option>
+                            <option value="sick of it"> sick of coding</option>
+                        </select>
+                    </fieldset>
+                </form>
+                    <!-- submittion button  -->
+                    <button form="journal" class="saveButton"  type="submit">Record Journal Entry</button>
+            </div>
+                    <!-- Journal forms end -->
+        <!-- saved entries form -->
+        <article class="entryLog"></article>
+        </div>
+
 
     <script type="module" src="./scripts/journal.js"></script>
 </body>

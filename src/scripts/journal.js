@@ -10,5 +10,16 @@
 
 import API from "./data.js"
 import renderJournalEntries from "./entryComponent.js"
+import saveButton from "./createEntry.js"
 
-API.getJournalEntries().then(renderJournalEntries)
+//fetch call to get data then renders taht data
+const getData = () => {
+API.getJournalEntries()
+.then(renderJournalEntries)}
+
+getData()
+saveButton()
+
+
+
+export default getData;

@@ -2,8 +2,11 @@
 
 
 //renders the data for use
-import journalConverter from "./entriesDOM.js"
 
+
+
+import journalConverter from "./entriesDOM.js"
+// renders data and uses convert to put inner HTML
 const renderJournalEntries = (journalEntries) => {
 
     for (const currentJournalObject of journalEntries) {
