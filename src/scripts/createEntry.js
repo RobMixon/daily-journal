@@ -16,7 +16,7 @@ const saveButton = (journalEntryObj) => {
         console.log(journalEntryObj)
             if (journalEntryObj.date ===""||journalEntryObj.concept===""||
                 journalEntryObj.entry===""||journalEntryObj.mood==="") {
-            alert("Somethings not filled out")
+            alert("Something is not filled out")
         } else {
             API.saveEntry(journalEntryObj).then(getData())
             return journalEntryObj;
