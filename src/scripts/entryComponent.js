@@ -6,7 +6,13 @@
 
 
 import journalConverter from "./entriesDOM.js"
-// renders data and uses convert to put inner HTML
+import entryMaker from "./entryMaker.js"
+import API from "./data.js"
+import buttons from "./createEntry.js"
+
+// renders data and uses convert to put inner HTM
+
+
 const renderJournalEntries = (journalEntries) => {
 
     for (const currentJournalObject of journalEntries) {
@@ -17,3 +23,13 @@ const renderJournalEntries = (journalEntries) => {
 }
 
 export default renderJournalEntries;
+
+// const entryContainer = document.querySelector("#entryContainer")
+
+// const renderJournalEntries = () => {
+//     entryContainer.innerHTML = "";
+//     API.getJournalEntries()
+//     .then((entryArray) => {
+        
+//     }
+// }

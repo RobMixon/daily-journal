@@ -20,6 +20,9 @@ API.getJournalEntries()
 getData()
 saveButton()
 
+const clearEntries = () => {
+    document.querySelector("form").value="";
+}
 
 
 export default getData;
