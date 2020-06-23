@@ -1,8 +1,10 @@
-import API from "./data";
-import renderJournalEntries from "./entryComponent";
+import API from "./data.js";
+import renderJournalEntries from "./entryComponent.js";
+import updateFormFields from "./updateFormFields.js";
+import getData from "./journal.js ";
 
 
-const entryContainer = document.querySelector("#entryContainer");
+const entryContainer = document.querySelector(".entryLog");
 
 export default {
     registerListeners () {
@@ -13,14 +15,20 @@ export default {
                 console.log(eventToDelete);
 
                 API.deleteObject(eventToDelete)
-                .then(renderJournalEntries)
+                .then(getData())
             } else if (event.target.id.startsWith("editEvent--")) {
                 const eventToEdit = event.target.id.split("--")[1];
                 console.log(eventToEdit);
 
                 API.getSingleObject(eventToEdit)
-                .then(newEntryObject => updateFormFields(newEntryObject))
+                .then(entries => updateFormFields(entries))
             }
         })
+    },
+    clearInputFields() {
+        document.querySelector("#date").value="";
+        document.querySelector("#concept").value="";
+        document.querySelector("#entry").value="";
+        document.querySelector("#mood").value="";
     }
 }

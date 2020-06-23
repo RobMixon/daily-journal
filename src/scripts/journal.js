@@ -11,18 +11,19 @@
 import API from "./data.js"
 import renderJournalEntries from "./entryComponent.js"
 import saveButton from "./createEntry.js"
+import registerListeners from "./buttons.js"
 
 //fetch call to get data then renders taht data
 const getData = () => {
 API.getJournalEntries()
 .then(renderJournalEntries)}
 
-getData()
-saveButton()
+getData();
+saveButton();
+registerListeners.registerListeners()
+registerListeners.clearInputFields()
 
-const clearEntries = () => {
-    document.querySelector("form").value="";
-}
+
 
 
 export default getData;

@@ -10,8 +10,10 @@
     <h1>Daily Journal</h1>
     <!-- Journal forms -->
                         <!-- date entry -->
+
             <div class="entryFormContainer">
                 <form class="form">
+                    <input type="hidden" id="journalId" value="" />
                     <fieldset>
                         <label for="journalDate">Date of entry</label>
                         <input type="date" name="journalDate" id="journalDate">
@@ -53,8 +55,6 @@
                     <!-- submittion button  -->
                     <button form="journal" class="saveButton"  type="submit">Record Journal Entry</button>
             
-                <div id="entryContainer">
-                </div>
                     <!-- Journal forms end -->
         <!-- saved entries form -->
         <article class="entryLog"></article>
