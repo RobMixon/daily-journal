@@ -1,19 +1,22 @@
 
 //converts the data into HTML
+const journalConverter = {
+     journalEntry (journalObject) {
 
-const journalConverter = (entries) => {
-
-    const journalHTMLRepresentation = `
-    <div class= "oldJournalEntry">
-        <h2 id="title--${entries.id}">${entries.concept}</h2>
-            <p id = "date"> ${entries.date}</p>
-            <p id = "entry"> ${entries.entry}</p>
-            <p id = "mood"> ${entries.mood}</p>
-            <button id="editEvent--${entries.id}">Edit</button>
-            <button id="deleteEvent--${entries.id}">Delete</button>
-    </div>
-    `              
-    return journalHTMLRepresentation   
+            const journalHTMLRepresentation = `
+            <hr>
+                <div class= "oldJournalEntry">
+                    <h2 id="concept">${journalObject.concept}</h2>
+                        <p id = "date"> ${journalObject.date}</p>
+                        <p id = "entry"> ${journalObject.entry}</p>
+                        <p id = "mood"> ${journalObject.mood}</p>
+                        <button id="editEvent--${journalObject.id}">Edit</button>
+                        <button id="deleteEvent--${journalObject.id}">Delete</button>
+                </div>
+            <hr>
+            `              
+            return journalHTMLRepresentation   
+        }
 }
 
 export default journalConverter;

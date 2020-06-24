@@ -1,7 +1,6 @@
 import API from "./data.js";
-import journalEntryObj from "./entryObj.js";
 
-const updateFormFields = journalId => {
+const updateFormFields = (journalId) => {
 
     const hiddenID = document.querySelector("#journalId")
         const entryConceptInput = document.querySelector("#concept")
@@ -9,7 +8,8 @@ const updateFormFields = journalId => {
         const entryEntryInput = document.querySelector("#entry")
         const entryMoodInput = document.querySelector("#mood")
 
-        API.getSingleObject(journalId)
+        fetch(`http://localhost:3000/entries/${journalId}`)
+        .then(response => response.json())
         .then(entryToEdit => {
 
         hiddenID.value = entryToEdit.id
@@ -17,6 +17,7 @@ const updateFormFields = journalId => {
         entryDateInput.value = entryToEdit.date
         entryEntryInput.value = entryToEdit.entry
         entryMoodInput.value=entryToEdit.mood
+        console.log("is it working yet?")
     })
 }
 

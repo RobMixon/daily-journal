@@ -1,9 +1,9 @@
 const entryMaker = (date, concept, entry, mood) => {
     const newEntry = {
-        date: date,
-        concept: concept,
-        entry: entry,
-        mood: mood
+         date,
+         concept,
+        entry,
+         mood
     }
     return newEntry;
 }
