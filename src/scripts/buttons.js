@@ -27,7 +27,7 @@ export default {
         })
     },
     clearInputFields() {
-        document.querySelector("#date").value = "";
+        document.querySelector("#journalDate").value = "";
         document.querySelector("#concept").value="";
         document.querySelector("#entry").value="";
         document.querySelector("#mood").value="";
@@ -53,3 +53,4 @@ export default {
         })
     }
 }
+

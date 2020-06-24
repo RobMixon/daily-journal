@@ -26,10 +26,6 @@ const API = {
         })
         .then(response => response.json())
     },
-    // getSingleObject: (journalId) => {
-    //     return fetch(`${url}entries/${journalId}`)
-    //     .then(response => response.json());
-    // },
     updateObject: (journalId, entryObj) => {
         return fetch(`${url}entries/${journalId}`, {
             method: "PUT",

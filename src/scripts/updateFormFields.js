@@ -14,7 +14,7 @@ const updateFormFields = (journalId) => {
 
         hiddenID.value = entryToEdit.id
         entryConceptInput.value = entryToEdit.concept
-        entryDateInput.value = entryToEdit.date
+        entryDateInput.value = entryToEdit.journalDate
         entryEntryInput.value = entryToEdit.entry
         entryMoodInput.value=entryToEdit.mood
         console.log("is it working yet?")

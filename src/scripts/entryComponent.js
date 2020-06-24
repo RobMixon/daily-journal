@@ -17,13 +17,3 @@ const render = {
     }
 }
 export default render;
-
-// const entryContainer = document.querySelector("#entryContainer")
-
-// const renderJournalEntries = () => {
-//     entryContainer.innerHTML = "";
-//     API.getJournalEntries()
-//     .then((entryArray) => {
-        
-//     }
-// }
