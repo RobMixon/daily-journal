@@ -1,13 +1,6 @@
 {
   "entries": [
     {
-      "date": "2020-06-22",
-      "concept": "filtering arrays",
-      "entry": "filtered stuff",
-      "mood": "sad",
-      "id": 3
-    },
-    {
       "date": "2020-06-23",
       "concept": "Edit button",
       "entry": "Crushing it or is it crushing me? idk anymore",
@@ -27,6 +20,9 @@
       "entry": "12",
       "mood": "happy",
       "id": 6
+    },
+    {
+      "id": 7
     }
   ]
 }

@@ -4,18 +4,18 @@ import journalEntryObj from "./entryObj.js"
 import clear from "./clear.js"
 
 //Save button function 
-const saveButton = (journalEntryObj) => {
+const saveButton = () => {
     const saveButtonListener = document.querySelector(".saveButton")
     saveButtonListener.addEventListener("click", event => {  
     
         let entryObj = journalEntryObj()
 
-        console.log(journalEntryObj)
-            if (journalEntryObj.date ===""||journalEntryObj.concept===""||
-                journalEntryObj.entry===""||journalEntryObj.mood==="") {
+        console.log(entryObj)
+            if (entryObj.date ===""||entryObj.concept===""||
+                entryObj.entry===""||entryObj.mood==="") {
             alert("Something is not filled out")
         } else {
-            API.saveEntry(journalEntryObj).then(getData())
+            API.saveEntry().then(getData())
             return journalEntryObj;
         }
     })
