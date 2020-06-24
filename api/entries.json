@@ -2,13 +2,6 @@
   "entries": [
     {
       "date": "2020-06-23",
-      "concept": "Edit button",
-      "entry": "Crushing it or is it crushing me? idk anymore",
-      "mood": "stressed / confused",
-      "id": 4
-    },
-    {
-      "date": "2020-06-23",
       "concept": "json",
       "entry": "23",
       "mood": "sad",
@@ -20,9 +13,6 @@
       "entry": "12",
       "mood": "happy",
       "id": 6
-    },
-    {
-      "id": 7
     }
   ]
 }
