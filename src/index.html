@@ -10,7 +10,7 @@
     <h1>Daily Journal</h1>
     <!-- Journal forms -->
                         <!-- date entry -->
-
+        <main class="journalBody">
             <div class="entryFormContainer">
                 <form class="form">
                     <input type="hidden" id="journalId" value="" />
@@ -18,23 +18,17 @@
                         <label for="journalDate">Date of entry</label>
                         <input type="date" name="journalDate" id="journalDate">
                     </fieldset>
-                </form>
                         <!-- concepts entry -->
-                <form class="form">
                     <fieldset>     
                         <label for="concept">Concepts Covered</label>
                         <input type="text" name="concept" id="concept">
                     </fieldset>
-                </form>
                         <!-- Journal entry -->
-                <form class="form">
                     <fieldset>        
                         <label for="entry">Journal Entry</label>
                         <input type="text" name="entry" id="entry">
                     </fieldset>
-                </form>
                         <!-- mood entry -->
-                <form class="form">
                     <fieldset>        
                         <label for="mood">How ya feeling?</label>
                         <select name="mood" id="mood" required>
@@ -59,7 +53,7 @@
         <!-- saved entries form -->
         <article class="entryLog"></article>
         </div>
-
+    </main>
 
     <script type="module" src="./scripts/journal.js"></script>
 </body>

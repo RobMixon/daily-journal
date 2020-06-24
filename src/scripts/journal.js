@@ -21,7 +21,7 @@ API.getJournalEntries()
 getData();
 saveButton();
 registerListeners.registerListeners()
-registerListeners.clearInputFields()
+
 
 
 

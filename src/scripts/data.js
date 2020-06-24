@@ -18,28 +18,30 @@ const API = {
             body: JSON.stringify(newEntryObject)
         }).then(response => response.json());
     },
-    getSingleObject: (id) => {
-        return fetch(`${url}entries/${id}`)
+    getSingleObject: (journalId) => {
+        return fetch(`${url}entries/${journalId}`)
         .then(response => response.json());
-        },
-        updateObject: (id, updatedEntryObject) => {
-            return fetch(`${url}entries/${id}`, {
-                    method: "PUT",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify(updatedEntryObject)
-            })
-        },
-        deleteObject: (id) => {
-            return fetch(`${url}entries/${id}`, {
-                    method: "DELETE"
-            }).then(response => response.json())
-        },
-        getByMood: () => {
-            return fetch(`${url}mood`)
-            .then(response => response.json())
-        }
+    },
+    updateObject: (journalId, updatedEntryObject) => {
+        return fetch(`${url}entries/${journalId}`, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(updatedEntryObject)
+        })
+        .then(response => response.json())
+    },
+    deleteObject: (journalId) => {
+        return fetch(`${url}entries/${journalId}`, {
+                method: "DELETE"
+        })
+        .then(response => response.json())
+    },
+    getByMood: () => {
+        return fetch(`${url}mood`)
+        .then(response => response.json())
+    }
 }
 
 export default API;

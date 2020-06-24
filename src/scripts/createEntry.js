@@ -1,18 +1,15 @@
 import API from "./data.js"
 import getData from "./journal.js"
+import journalEntryObj from "./entryObj.js"
+import clear from "./clear.js"
 
 //Save button function 
 const saveButton = (journalEntryObj) => {
     const saveButtonListener = document.querySelector(".saveButton")
     saveButtonListener.addEventListener("click", event => {  
     
-        let journalEntryObj = {};
-    
-        journalEntryObj.date = document.getElementById("journalDate").value 
-        journalEntryObj.concept = document.getElementById("concept").value
-        journalEntryObj.entry = document.getElementById("entry").value
-        journalEntryObj.mood = document.getElementById("mood").value
-    
+        let entryObj = journalEntryObj()
+
         console.log(journalEntryObj)
             if (journalEntryObj.date ===""||journalEntryObj.concept===""||
                 journalEntryObj.entry===""||journalEntryObj.mood==="") {
