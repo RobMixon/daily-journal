@@ -40,6 +40,8 @@ saveButton.addEventListener("click", event => {
     }
 })
 
-// buttons.saveButtonFunction()
+buttons.registerListener()
+
+ buttons.saveButtonFunction()
 
 

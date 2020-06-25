@@ -7,17 +7,16 @@ import entryMaker from "./entryMaker.js"
 
 const entryContainer = document.querySelector(".entryLog");
 
-export default {
+const buttons = {
     registerListener () {
         entryContainer.addEventListener("click", event => {
-            console.log("what is happening", event.target.id);
             if (event.target.id.startsWith("deleteEvent--")) {
                 const eventToDelete = event.target.id.split("--")[1];
                 console.log(eventToDelete);
 
                 API.deleteObject(eventToDelete)
-                .then(API.getJournalEntries())
-                .then(render.renderJournalEntries(API.journalEntries))
+                .then(API.getJournalEntries)
+                .then(render.renderJournalEntries)
             } else if (event.target.id.startsWith("editEvent--")) {
                 const eventToEdit = event.target.id.split("--")[1];
                 console.log(eventToEdit);
@@ -33,8 +32,8 @@ export default {
         document.querySelector("#mood").value="";
     },
     saveButtonFunction () {
-        const saveEditButton = document.querySelector(".saveButton")
-        saveEditButton.addEventListener("click", event => {
+        const editButton = document.querySelector("#editEvent")
+            editButton.addEventListener("click", event => {
             const hiddenEntryId = document.querySelector("#journalId")
         if(hiddenEntryId.value !== "") {
             const newDateInput = document.querySelector("#date").value;
@@ -54,3 +53,4 @@ export default {
     }
 }
 
+export default buttons;
