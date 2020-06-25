@@ -9,17 +9,39 @@
 //applies the rendered data
 
 import API from "./data.js"
-import renderJournalEntries from "./entryComponent.js"
-import saveButton from "./createEntry.js"
+import render from "./entryComponent.js"
+import entryMaker from "./entryMaker.js"
+import registerListeners from "./buttons.js"
+import buttons from "./buttons.js"
 
+const showEntries = () => {
+    document.querySelector(".entryLog").innerHTML = ""
+    API.getJournalEntries()
+        .then ((blue) => render.renderJournalEntries(blue))
+        .then (() => document.querySelector(".form").reset())
+}
 //fetch call to get data then renders taht data
-const getData = () => {
-API.getJournalEntries()
-.then(renderJournalEntries)}
+API.getJournalEntries().then(() => render.renderJournalEntries(API.journalEntries))
 
-getData()
-saveButton()
+const saveButton = document.querySelector(".saveButton");
+
+saveButton.addEventListener("click", event => {
+    const dateInput = document.querySelector("#journalDate").value;
+    const conceptInput = document.querySelector("#concept").value;
+    const entryInput = document.querySelector("#entry").value;
+    const moodInput = document.querySelector("#mood").value;
+
+    if (dateInput===""||conceptInput===""||entryInput===""||moodInput==="") {
+        alert("All fields must be filled in before clicking 'Record Entry'")
+    } else {
+        const generateEntry = entryMaker (dateInput, conceptInput, entryInput, moodInput)
+        API.saveEntry(generateEntry)
+        .then(showEntries())
+    }
+})
+
+buttons.registerListener()
+
+ buttons.saveButtonFunction()
 
 
-
-export default getData;
