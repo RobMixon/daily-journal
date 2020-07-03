@@ -1,7 +1,6 @@
 
 //converts the data into HTML
-const journalConverter = {
-     journalEntry (journalObject) {
+const journalConverter = (journalObject) => {
 
             const journalHTMLRepresentation = `
             <hr>
@@ -17,6 +16,5 @@ const journalConverter = {
             `              
             return journalHTMLRepresentation   
         }
-}
 
 export default journalConverter;

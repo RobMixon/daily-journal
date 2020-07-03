@@ -1,5 +1,5 @@
 import API from "./data.js";
-import render from "./entryComponent.js";
+import render from "./entryList.js";
 import updateFormFields from "./updateFormFields.js";
 import entryMaker from "./entryMaker.js"
 
