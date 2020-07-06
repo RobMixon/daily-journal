@@ -9,21 +9,7 @@
 //applies the rendered data
 
 import API from "./data.js"
-import render from "./entryList.js"
-import entryMaker from "./entryMaker.js"
-import registerListeners from "./buttons.js"
-import buttons from "./buttons.js"
 
-const showEntries = {
-    getEntries () {
-        API.getJournalEntries()
-    }
-}
 
-showEntries.getEntries
-
-buttons.registerListener()
-
- buttons.saveButtonFunction()
 
 
