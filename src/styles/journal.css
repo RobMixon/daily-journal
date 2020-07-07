@@ -1,6 +1,8 @@
-.oldJournalEntry {
-    border: black solid 1px;
-    padding: 5%;
-    width: 20%;
-    margin-top: 5%;
+.entryLog {
+    display: flex;
+}
+
+.journal__container {
+    margin: 1rem;
+    padding: 1rem;
 }
