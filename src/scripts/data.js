@@ -1,38 +1,37 @@
 
-//gets data
 
-
-const url ="http://localhost:3000/";
+const url = "http://localhost:3000/entries"
 
 const API = {
-    journalEntries : [],
-    getJournalEntries () {
-        return fetch(`${url}entries`)
-            .then(response => {return response.json()})
-            .then(journalArray => this.journalEntries = journalArray)
+    getJournalEntries: () => {
+        return fetch(`${url}`)
+        .then(response => response.json())
     },
-    saveEntry: (entryObj) => {
-        return fetch(`${url}entries`, {
+    saveJournalEntry: (newEntryObj) => {
+        return fetch (`${url}`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify(entryObj)
-        }).then(response => response.json());
-    },
-    deleteObject: (journalId) => {
-        return fetch(`${url}entries/${journalId}`, {
-                method: "DELETE"
+            body: JSON.stringify(newEntryObj)
         })
+    },
+    deleteJournalEntry: (id) => {
+        return fetch(`${url}/${id}`, {
+           method: "DELETE"
+        })
+    },
+    getSingleEntry: (id) => {
+        return fetch (`${url}/${id}`)
         .then(response => response.json())
     },
-    updateObject: (journalId, entryObj) => {
-        return fetch(`${url}entries/${journalId}`, {
+    editJournalEntry: (id, editEntryObj) => {
+        return fetch (`${url}/${id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify(entryObj)
+            body: JSON.stringify(editEntryObj)
         })
     }
 }
